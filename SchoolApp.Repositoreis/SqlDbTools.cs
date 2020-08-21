@@ -13,14 +13,44 @@ namespace SchoolApp.Repositoreis
     {
         private MySqlConnectionStringBuilder connectionStringBuilder;
         private string tempDbName;
+        public SqlDbTools()
+        {
+            RefreshConnectionString();
+        }
         public async Task<bool> CheckDatabaseExists()
         {
-            return true;
+            try
+            {
+                using (var connection = new MySqlConnection(connectionStringBuilder.ConnectionString))
+                {
+                    await connection.OpenAsync();
+                    var command = connection.CreateCommand();
+                    command.CommandText = "select count(*) from information_schema.schemata where schema_name = @dbname";
+                    command.Parameters.Add(new MySqlParameter("dbname", tempDbName));
+                    var result = (int)await command.ExecuteScalarAsync();
+                    return result > 0;
+                }
+            }
+            catch (Exception ex)
+            {
+                return false;
+            }
         }
 
         public async Task<bool> CheckDBConnection()
         {
-            return true;
+            try
+            {
+                using (var connection = new MySqlConnection(connectionStringBuilder.ConnectionString))
+                {
+                    await connection.OpenAsync();
+                }
+                return true;
+            }
+            catch (Exception ex)
+            {
+                return false;
+            }
 
         }
 
@@ -34,7 +64,7 @@ namespace SchoolApp.Repositoreis
         {
             var connectionString = ConfigurationManager.ConnectionStrings["mySQL"].ConnectionString;
             connectionStringBuilder = new MySqlConnectionStringBuilder(connectionString);
-            connectionStringBuilder.init
+            connectionStringBuilder.Database = "sys";
         }
     }
 }
