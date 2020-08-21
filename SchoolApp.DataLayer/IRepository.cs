@@ -10,6 +10,7 @@ namespace SchoolApp.DataLayer
         int Update(TEntity entity);
         TEntity Find(params object[] keys);
         List<TEntity> All();
+        int Count();
 
     }
 }

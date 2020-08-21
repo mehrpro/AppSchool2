@@ -126,6 +126,18 @@ namespace SchoolApp.DataLayer
 
         }
 
+        public int Count()
+        {
+            var qry = new MySqlCommand("Select count(*) from "+schema+"."+tableName);
+            using (var connection = new MySqlConnection(connectionString))
+            {
+                connection.Open();
+                var command =new MySqlCommand(qry.ToString(),connection);
+                ;
+                return (int) command.ExecuteScalar();
+            }
+        }
+
         public TEntity Find(params object[] keys)
         {
             var primeryKey = _propertyModels.Where(property => property.IsPrimeryKey);
