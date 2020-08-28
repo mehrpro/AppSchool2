@@ -25,7 +25,8 @@ namespace SchoolApp.WinClient.Views.SystemForms
             var connectionString = ConfigurationManager.ConnectionStrings["mySQL"].ConnectionString;
             var connectionStringBuilder = new MySqlConnectionStringBuilder(connectionString);
             txtDataSource.EditValue = connectionStringBuilder.Server;
-            connectionStringBuilder.IntegratedSecurity = !chkUserID.Checked;
+            //connectionStringBuilder.IntegratedSecurity = chkUserID.Checked;
+            chkUserID.Checked = !connectionStringBuilder.IntegratedSecurity;
             if (!connectionStringBuilder.IntegratedSecurity)
             {
                 txtUserID.EditValue = connectionStringBuilder.UserID;
