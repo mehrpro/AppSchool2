@@ -1,8 +1,5 @@
 ﻿using SchoolApp.RepositoryAbstracts;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 using MySql.Data.MySqlClient;
 using System.Configuration;
@@ -56,6 +53,8 @@ namespace SchoolApp.Repositoreis
 
         public async Task<bool> CreateDatabase(string dbScript)
         {
+            //var connectionString = ConfigurationManager.ConnectionStrings["mySQL"].ConnectionString;
+            //var con
             return true;
 
         }

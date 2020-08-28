@@ -8,10 +8,10 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace SchoolApp.WinClient.Properties
-{
-
-
+namespace SchoolApp.WinClient.Properties {
+    using System;
+    
+    
     /// <summary>
     ///   A strongly-typed resource class, for looking up localized strings, etc.
     /// </summary>
@@ -22,49 +22,87 @@ namespace SchoolApp.WinClient.Properties
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "4.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    internal class Resources
-    {
-
+    internal class Resources {
+        
         private static global::System.Resources.ResourceManager resourceMan;
-
+        
         private static global::System.Globalization.CultureInfo resourceCulture;
-
+        
         [global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
-        internal Resources()
-        {
+        internal Resources() {
         }
-
+        
         /// <summary>
         ///   Returns the cached ResourceManager instance used by this class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Resources.ResourceManager ResourceManager
-        {
-            get
-            {
-                if ((resourceMan == null))
-                {
+        internal static global::System.Resources.ResourceManager ResourceManager {
+            get {
+                if (object.ReferenceEquals(resourceMan, null)) {
                     global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("SchoolApp.WinClient.Properties.Resources", typeof(Resources).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
             }
         }
-
+        
         /// <summary>
         ///   Overrides the current thread's CurrentUICulture property for all
         ///   resource lookups using this strongly typed resource class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Globalization.CultureInfo Culture
-        {
-            get
-            {
+        internal static global::System.Globalization.CultureInfo Culture {
+            get {
                 return resourceCulture;
             }
-            set
-            {
+            set {
                 resourceCulture = value;
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to برقراری ارتباط با موفقیت انجام شد.
+        /// </summary>
+        internal static string ComplateConnectionString {
+            get {
+                return ResourceManager.GetString("ComplateConnectionString", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to مشکلی در زمان اجرای برنامه بوجود آمده است.
+        /// </summary>
+        internal static string ErrorForCLR {
+            get {
+                return ResourceManager.GetString("ErrorForCLR", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to تنظیمات برقراری ارتباط با سرور صحیح نمی باشد پس از بررسی مجدد تلاش کنید.
+        /// </summary>
+        internal static string NotComplatedConnection {
+            get {
+                return ResourceManager.GetString("NotComplatedConnection", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to CREATE DATABASE  IF NOT EXISTS `schooldb2` /*!40100 DEFAULT CHARACTER SET utf8 COLLATE utf8_persian_ci */ /*!80016 DEFAULT ENCRYPTION=&apos;N&apos; */;
+        ///USE `schooldb`;
+        ///-- MySQL dump 10.13  Distrib 8.0.21, for Win64 (x86_64)
+        ///--
+        ///-- Host: localhost    Database: schooldb
+        ///-- ------------------------------------------------------
+        ///-- Server version	8.0.21
+        ///
+        ////*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+        ////*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+        ////*!40101 SET @OLD_COLLATIO [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string schooldb {
+            get {
+                return ResourceManager.GetString("schooldb", resourceCulture);
             }
         }
     }

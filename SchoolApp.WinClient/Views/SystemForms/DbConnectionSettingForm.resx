@@ -117,17 +117,4 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="ComplateConnectionString" xml:space="preserve">
-    <value>برقراری ارتباط با موفقیت انجام شد</value>
-  </data>
-  <data name="ErrorForCLR" xml:space="preserve">
-    <value>مشکلی در زمان اجرای برنامه بوجود آمده است</value>
-  </data>
-  <data name="NotComplatedConnection" xml:space="preserve">
-    <value>تنظیمات برقراری ارتباط با سرور صحیح نمی باشد پس از بررسی مجدد تلاش کنید</value>
-  </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="schooldb" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\schooldb.sql;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
-  </data>
 </root>

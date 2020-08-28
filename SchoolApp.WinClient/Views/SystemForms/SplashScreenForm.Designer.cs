@@ -35,7 +35,7 @@
             // 
             this.StatusLabel.Location = new System.Drawing.Point(377, 230);
             this.StatusLabel.Name = "StatusLabel";
-            this.StatusLabel.Size = new System.Drawing.Size(63, 13);
+            this.StatusLabel.Size = new System.Drawing.Size(70, 13);
             this.StatusLabel.TabIndex = 0;
             this.StatusLabel.Text = "labelControl1";
             // 
@@ -45,6 +45,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(817, 327);
             this.Controls.Add(this.StatusLabel);
+            this.Font = new System.Drawing.Font("Segoe UI", 8.25F);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "SplashScreenForm";
             this.Text = "SplashScreenForm";

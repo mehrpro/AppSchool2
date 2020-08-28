@@ -19,6 +19,13 @@ namespace SchoolApp.WinClient
             
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+
+            var spfrm = new Views.SystemForms.SplashScreenForm();
+            var result = spfrm.ShowDialog();
+            if (result == DialogResult.Cancel)
+            {
+                return;
+            }
             Application.Run(new Form1());
         }
     }
