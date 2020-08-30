@@ -123,7 +123,7 @@
             this.chkUserID.Parmida_ActivePlusMultiKeys = false;
             this.chkUserID.Properties.Caption = "شناسه کاربری";
             this.chkUserID.Properties.GlyphAlignment = DevExpress.Utils.HorzAlignment.Far;
-            this.chkUserID.Size = new System.Drawing.Size(92, 20);
+            this.chkUserID.Size = new System.Drawing.Size(92, 19);
             this.chkUserID.TabIndex = 3;
             this.chkUserID.CheckedChanged += new System.EventHandler(this.chkUserID_CheckedChanged);
             // 
@@ -143,12 +143,13 @@
             this.btnClose.Size = new System.Drawing.Size(79, 27);
             this.btnClose.TabIndex = 4;
             this.btnClose.Text = "انصراف";
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // DbConnectionSettingForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(436, 170);
+            this.ClientSize = new System.Drawing.Size(436, 164);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.chkUserID);
@@ -164,6 +165,7 @@
             this.MinimizeBox = false;
             this.Name = "DbConnectionSettingForm";
             this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "تنظیمات ارتباط با بانک اطلاعاتی";
             this.Load += new System.EventHandler(this.DbConnectionSettingForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.txtDataSource.Properties)).EndInit();

@@ -37,6 +37,7 @@
     <Reference Include="DevExpress.Data.v18.2, Version=18.2.10.0, Culture=neutral, PublicKeyToken=aafb20a8e8c4d2cc" />
     <Reference Include="DevExpress.Printing.v18.2.Core, Version=18.2.10.0, Culture=neutral, PublicKeyToken=aafb20a8e8c4d2cc" />
     <Reference Include="DevExpress.Utils.v18.2, Version=18.2.10.0, Culture=neutral, PublicKeyToken=aafb20a8e8c4d2cc" />
+    <Reference Include="DevExpress.XtraBars.v18.2" />
     <Reference Include="DevExpress.XtraEditors.v18.2, Version=18.2.10.0, Culture=neutral, PublicKeyToken=aafb20a8e8c4d2cc" />
     <Reference Include="DevExpress.XtraGrid.v18.2, Version=18.2.10.0, Culture=neutral, PublicKeyToken=aafb20a8e8c4d2cc" />
     <Reference Include="DevExpress.XtraLayout.v18.2, Version=18.2.10.0, Culture=neutral, PublicKeyToken=aafb20a8e8c4d2cc" />
@@ -60,12 +61,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="ExtentionMethod\Cultures.cs" />
+    <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Helper\ConfigurationTools.cs" />
+    <Compile Include="IoC\TypeRegistery.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Views\SystemForms\DbConnectionSettingForm.cs">
@@ -74,14 +78,20 @@
     <Compile Include="Views\SystemForms\DbConnectionSettingForm.Designer.cs">
       <DependentUpon>DbConnectionSettingForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\SystemForms\FrmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\SystemForms\FrmLogin.Designer.cs">
+      <DependentUpon>FrmLogin.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\SystemForms\SplashScreenForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Views\SystemForms\SplashScreenForm.Designer.cs">
       <DependentUpon>SplashScreenForm.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -95,6 +105,9 @@
     </Compile>
     <EmbeddedResource Include="Views\SystemForms\DbConnectionSettingForm.resx">
       <DependentUpon>DbConnectionSettingForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\SystemForms\FrmLogin.resx">
+      <DependentUpon>FrmLogin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\SystemForms\SplashScreenForm.resx">
       <DependentUpon>SplashScreenForm.cs</DependentUpon>
@@ -131,9 +144,17 @@
       <Name>SchoolApp.RepositoryAbstracts</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\windows_xp_bliss-wide.jpg" />
+  </ItemGroup>
   <ItemGroup>
     <None Include="Resources\schooldb.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\download.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Views\SchoolBase\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

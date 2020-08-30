@@ -1,5 +1,9 @@
-﻿using System;
+﻿using SchoolApp.RepositoryAbstracts;
+using SchoolApp.WinClient.ExtentionMethod;
+using SchoolApp.WinClient.Views.SystemForms;
+using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -16,17 +20,26 @@ namespace SchoolApp.WinClient
         [STAThread]
         static void Main()
         {
-            
+            Cultures.InitializePersianCulture();
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-
-            var spfrm = new Views.SystemForms.SplashScreenForm();
+            var container = new StructureMap.Container(new IoC.TypeRegistery());
+            var spfrm = container.GetInstance<Views.SystemForms.SplashScreenForm>();
             var result = spfrm.ShowDialog();
-            if (result == DialogResult.Cancel)
-            {
-                return;
-            }
-            Application.Run(new Form1());
+            if (result != DialogResult.OK)return;
+
+            //var userrepo = container.GetInstance<IstudentsRepository>();
+            //if(userrepo.Count() == 0)
+            //{
+            //    userrepo.Add(new Entities.students
+            //    {
+                    
+            //    })
+            //}
+            var logForm = container.GetInstance<FrmLogin>();
+            var resultLog = logForm.ShowDialog();
+            if (resultLog != DialogResult.OK)return;
+            Application.Run(new MainForm());
         }
     }
 }

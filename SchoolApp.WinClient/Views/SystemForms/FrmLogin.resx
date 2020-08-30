@@ -117,23 +117,60 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="ErrorForCLR" xml:space="preserve">
-    <value>مشکلی در زمان اجرای برنامه بوجود آمده است</value>
+  <assembly alias="DevExpress.Data.v18.2" name="DevExpress.Data.v18.2, Version=18.2.10.0, Culture=neutral, PublicKeyToken=aafb20a8e8c4d2cc" />
+  <data name="groupControl1.CaptionImageOptions.SvgImage" type="DevExpress.Utils.Svg.SvgImage, DevExpress.Data.v18.2" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        AAEAAAD/////AQAAAAAAAAAMAgAAAFpEZXZFeHByZXNzLkRhdGEudjE4LjIsIFZlcnNpb249MTguMi4x
+        MC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWFhZmIyMGE4ZThjNGQyY2MFAQAAAB1E
+        ZXZFeHByZXNzLlV0aWxzLlN2Zy5TdmdJbWFnZQEAAAAERGF0YQcCAgAAAAkDAAAADwMAAADjAwAAAu+7
+        vzw/eG1sIHZlcnNpb249JzEuMCcgZW5jb2Rpbmc9J1VURi04Jz8+DQo8c3ZnIHg9IjBweCIgeT0iMHB4
+        IiB2aWV3Qm94PSIwIDAgMzIgMzIiIHZlcnNpb249IjEuMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3Jn
+        LzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgZW5hYmxl
+        LWJhY2tncm91bmQ9Im5ldyAwIDAgMzIgMzIiIHhtbDpzcGFjZT0icHJlc2VydmUiIGlkPSJMYXllcl8x
+        Ij4NCiAgPGcgaWQ9IlVzZXIiPg0KICAgIDxwYXRoIGQ9Ik0xNi4yLDI2SDJ2LTEuNWMwLTcuNSw1Ljct
+        NSw4LTguNWMwLjgsMS41LDIuMSw0LDQsNHMzLjItMi41LDQtNGMwLjcsMSwxLjcsMS41LDIuNywxLjls
+        MCwwICAgYy0wLjUsMC45LTAuNywyLTAuNywzLjFjMCwwLjQsMCwwLjcsMC4xLDEuMUwxNi4yLDI2TDE2
+        LjIsMjZ6IE05LjMsMTAuOWMwLDAsMCwwLjEsMCwwLjJjMC42LDIuMywyLDQuOSw0LjcsNC45czQuMi0y
+        LjYsNC43LTQuOSAgIFYxMWMxLDAuMSwwLjYtMS4xLDAuOS0xLjZDMTkuOCw4LjksMjAsOC41LDE5Ljks
+        OGMtMC4xLTAuNC0wLjQtMC40LTAuNS0wLjNDMjEuMiwyLjgsMTguMywzLDE4LjMsM1MxOCwwLDEyLjgs
+        MEM4LDAsNy40LDQsOC41LDcuNiAgIEM4LjQsNy42LDguMSw3LjcsOCw3LjlDNy45LDguNCw4LjIsOC44
+        LDguNCw5LjNDOC42LDkuOCw4LjMsMTEsOS4zLDEwLjl6IiBmaWxsPSIjNzI3MjcyIiBjbGFzcz0iQmxh
+        Y2siIC8+DQogICAgPHBhdGggZD0iTTI3LDE2Yy0yLjgsMC01LDIuMi01LDVjMCwwLjYsMC4xLDEuMiww
+        LjMsMS43TDE2LDI5djNoNHYtMmgydi0yaDJsMi4xLTIuMUMyNi40LDI2LDI2LjcsMjYsMjcsMjYgICBj
+        Mi44LDAsNS0yLjIsNS01UzI5LjgsMTYsMjcsMTZ6IE0yNywyMmMtMC42LDAtMS0wLjQtMS0xYzAtMC42
+        LDAuNC0xLDEtMXMxLDAuNCwxLDFDMjgsMjEuNiwyNy42LDIyLDI3LDIyeiIgZmlsbD0iI0ZGQjExNSIg
+        Y2xhc3M9IlllbGxvdyIgLz4NCiAgPC9nPg0KPC9zdmc+Cw==
+</value>
   </data>
-  <data name="ComplateConnectionString" xml:space="preserve">
-    <value>برقراری ارتباط با موفقیت انجام شد</value>
+  <data name="simpleButton2.ImageOptions.SvgImage" type="DevExpress.Utils.Svg.SvgImage, DevExpress.Data.v18.2" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        AAEAAAD/////AQAAAAAAAAAMAgAAAFpEZXZFeHByZXNzLkRhdGEudjE4LjIsIFZlcnNpb249MTguMi4x
+        MC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWFhZmIyMGE4ZThjNGQyY2MFAQAAAB1E
+        ZXZFeHByZXNzLlV0aWxzLlN2Zy5TdmdJbWFnZQEAAAAERGF0YQcCAgAAAAkDAAAADwMAAACKAQAAAu+7
+        vzw/eG1sIHZlcnNpb249JzEuMCcgZW5jb2Rpbmc9J1VURi04Jz8+DQo8c3ZnIHg9IjBweCIgeT0iMHB4
+        IiB2aWV3Qm94PSIwIDAgMzIgMzIiIHZlcnNpb249IjEuMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3Jn
+        LzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgZW5hYmxl
+        LWJhY2tncm91bmQ9Im5ldyAwIDAgMzIgMzIiIHhtbDpzcGFjZT0icHJlc2VydmUiIGlkPSJMYXllcl8x
+        Ij4NCiAgPGcgaWQ9IlZhbGlkYXRpb24iPg0KICAgIDxnPg0KICAgICAgPHBvbHlnb24gcG9pbnRzPSIy
+        Nyw0IDExLDIwIDUsMTQgMiwxNyAxMSwyNiAzMCw3ICAgIiBmaWxsPSIjMDM5QzIzIiBjbGFzcz0iR3Jl
+        ZW4iIC8+DQogICAgPC9nPg0KICA8L2c+DQo8L3N2Zz4L
+</value>
   </data>
-  <data name="NotComplatedConnection" xml:space="preserve">
-    <value>تنظیمات برقراری ارتباط با سرور صحیح نمی باشد پس از بررسی مجدد تلاش کنید</value>
-  </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="schooldb" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\schooldb.sql;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
-  </data>
-  <data name="windows_xp_bliss-wide" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\windows_xp_bliss-wide.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="download" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\download.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="simpleButton1.ImageOptions.SvgImage" type="DevExpress.Utils.Svg.SvgImage, DevExpress.Data.v18.2" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        AAEAAAD/////AQAAAAAAAAAMAgAAAFpEZXZFeHByZXNzLkRhdGEudjE4LjIsIFZlcnNpb249MTguMi4x
+        MC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWFhZmIyMGE4ZThjNGQyY2MFAQAAAB1E
+        ZXZFeHByZXNzLlV0aWxzLlN2Zy5TdmdJbWFnZQEAAAAERGF0YQcCAgAAAAkDAAAADwMAAAAiAgAAAu+7
+        vzw/eG1sIHZlcnNpb249JzEuMCcgZW5jb2Rpbmc9J1VURi04Jz8+DQo8c3ZnIHg9IjBweCIgeT0iMHB4
+        IiB2aWV3Qm94PSIwIDAgMzIgMzIiIHZlcnNpb249IjEuMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3Jn
+        LzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgZW5hYmxl
+        LWJhY2tncm91bmQ9Im5ldyAwIDAgMzIgMzIiIHhtbDpzcGFjZT0icHJlc2VydmUiIGlkPSJMYXllcl8x
+        Ij4NCiAgPGcgaWQ9IkZvcmJpZCI+DQogICAgPHBhdGggZD0iTTE2LDRDOS40LDQsNCw5LjQsNCwxNnM1
+        LjQsMTIsMTIsMTJzMTItNS40LDEyLTEyUzIyLjYsNCwxNiw0eiBNMTYsOGMxLjUsMCwyLjksMC40LDQu
+        MSwxLjFsLTExLDExICAgQzguNCwxOC45LDgsMTcuNSw4LDE2QzgsMTEuNiwxMS42LDgsMTYsOHogTTE2
+        LDI0Yy0xLjUsMC0yLjgtMC40LTQtMS4xTDIyLjksMTJjMC43LDEuMiwxLjEsMi41LDEuMSw0QzI0LDIw
+        LjQsMjAuNCwyNCwxNiwyNHoiIGZpbGw9IiNEMTFDMUMiIGNsYXNzPSJSZWQiIC8+DQogIDwvZz4NCjwv
+        c3ZnPgs=
+</value>
   </data>
 </root>

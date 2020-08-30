@@ -18,8 +18,8 @@ namespace SchoolApp.RepositoryAbstracts
 		List<SchoolApp.Entities.students> GetByFatherPhone(string value);
 		List<SchoolApp.Entities.students> GetByMotherPhone(string value);
 		List<SchoolApp.Entities.students> GetBySMS(string value);
-		List<SchoolApp.Entities.students> GetByBrithDate(object value);
+		List<SchoolApp.Entities.students> GetByBrithDate(DateTime? value);
 		List<SchoolApp.Entities.students> GetByRegDate(DateTime value);
-		List<SchoolApp.Entities.students> GetByenabled(bool value);
+		List<SchoolApp.Entities.students> GetByenabled(byte value);
 	}
 }

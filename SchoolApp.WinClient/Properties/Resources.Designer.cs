@@ -19,7 +19,7 @@ namespace SchoolApp.WinClient.Properties {
     // class via a tool like ResGen or Visual Studio.
     // To add or remove a member, edit your .ResX file then rerun ResGen
     // with the /str option, or rebuild your VS project.
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "4.0.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "16.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     internal class Resources {
@@ -70,6 +70,16 @@ namespace SchoolApp.WinClient.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap download {
+            get {
+                object obj = ResourceManager.GetObject("download", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to مشکلی در زمان اجرای برنامه بوجود آمده است.
         /// </summary>
         internal static string ErrorForCLR {
@@ -88,7 +98,7 @@ namespace SchoolApp.WinClient.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to CREATE DATABASE  IF NOT EXISTS `schooldb2` /*!40100 DEFAULT CHARACTER SET utf8 COLLATE utf8_persian_ci */ /*!80016 DEFAULT ENCRYPTION=&apos;N&apos; */;
+        ///   Looks up a localized string similar to CREATE DATABASE  IF NOT EXISTS `schooldb` /*!40100 DEFAULT CHARACTER SET utf8 COLLATE utf8_persian_ci */ /*!80016 DEFAULT ENCRYPTION=&apos;N&apos; */;
         ///USE `schooldb`;
         ///-- MySQL dump 10.13  Distrib 8.0.21, for Win64 (x86_64)
         ///--
@@ -98,11 +108,21 @@ namespace SchoolApp.WinClient.Properties {
         ///
         ////*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
         ////*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
-        ////*!40101 SET @OLD_COLLATIO [rest of string was truncated]&quot;;.
+        ////*!40101 SET @OLD_COLLATION [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string schooldb {
             get {
                 return ResourceManager.GetString("schooldb", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap windows_xp_bliss_wide {
+            get {
+                object obj = ResourceManager.GetObject("windows_xp_bliss-wide", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
             }
         }
     }

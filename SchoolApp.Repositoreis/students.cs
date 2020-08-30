@@ -4,12 +4,11 @@ using MySql.Data.MySqlClient;
 using SchoolApp.Entities;
 using SchoolApp.DataLayer;
 using SchoolApp.RepositoryAbstracts;
-
 namespace SchoolApp.Repositories
 {
-	public class studentsRepository : GenericRepository<students>,IstudentsRepository
+	public class studentsRepository : GenericRepository<students>, IstudentsRepository
 	{
-		public studentsRepository():base("name=mySQL") {}
+		public studentsRepository() : base("name=mySQL") { }
 		public List<students> GetByID(int value)
 		{
 			return RunQuery("SELECT * FROM schooldb.students WHERE ID = @Value",new MySqlParameter("Value",value));
@@ -58,7 +57,7 @@ namespace SchoolApp.Repositories
 		{
 			return RunQuery("SELECT * FROM schooldb.students WHERE SMS LIKE @Value",new MySqlParameter("Value",value));
 		}
-		public List<students> GetByBrithDate(object value)
+		public List<students> GetByBrithDate(DateTime? value)
 		{
 			return RunQuery("SELECT * FROM schooldb.students WHERE BrithDate = @Value",new MySqlParameter("Value",value));
 		}
@@ -66,7 +65,7 @@ namespace SchoolApp.Repositories
 		{
 			return RunQuery("SELECT * FROM schooldb.students WHERE RegDate = @Value",new MySqlParameter("Value",value));
 		}
-		public List<students> GetByenabled(bool value)
+		public List<students> GetByenabled(byte value)
 		{
 			return RunQuery("SELECT * FROM schooldb.students WHERE enabled = @Value",new MySqlParameter("Value",value));
 		}

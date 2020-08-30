@@ -36,7 +36,7 @@ namespace SchoolApp.Entities
 		[DisplayName("تاریخ تولد")]
 		 public DateTime?	BrithDate	{get;set;}
 		[DisplayName("تاریخ ثبت")]
-		 public DateTime 	RegDate	{get;set;}
+		 public DateTime	RegDate	{get;set;}
 		[DisplayName("وضعیت")]
 		 public byte	enabled	{get;set;}
 	}

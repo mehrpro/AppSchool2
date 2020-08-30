@@ -22,10 +22,10 @@ namespace SchoolApp.Repositoreis
                 {
                     await connection.OpenAsync();
                     var command = connection.CreateCommand();
-                    command.CommandText = "select count(*) from information_schema.schemata where schema_name = @dbname";
-                    command.Parameters.Add(new MySqlParameter("dbname", tempDbName));
-                    var result = (int)await command.ExecuteScalarAsync();
-                    return result > 0;
+                    command.CommandText = $"select count(*) from information_schema.schemata where schema_name = '{tempDbName}'";
+                    //command.Parameters.Add(new MySqlParameter("dbname", tempDbName));
+                    var result = await command.ExecuteScalarAsync();
+                    return Convert.ToBoolean(result);
                 }
             }
             catch (Exception ex)
@@ -53,9 +53,28 @@ namespace SchoolApp.Repositoreis
 
         public async Task<bool> CreateDatabase(string dbScript)
         {
-            //var connectionString = ConfigurationManager.ConnectionStrings["mySQL"].ConnectionString;
-            //var con
-            return true;
+            //connectionStringBuilder.Database = "information_schema";
+            try
+            {
+                using (var connection = new MySqlConnection(connectionStringBuilder.ConnectionString))
+                {
+                    await connection.OpenAsync();
+                    var cmd = connection.CreateCommand();
+                    cmd.CommandText = $"create database {tempDbName}";
+                    await cmd.ExecuteNonQueryAsync();
+                    connection.ChangeDatabase(tempDbName);
+                    var createdatabaseCommand = connection.CreateCommand();
+                    createdatabaseCommand.CommandText = dbScript.Replace("schooldb",tempDbName.ToString());
+                    await createdatabaseCommand.ExecuteNonQueryAsync();
+                    return true;
+                }
+
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+         
 
         }
 
@@ -63,7 +82,8 @@ namespace SchoolApp.Repositoreis
         {
             var connectionString = ConfigurationManager.ConnectionStrings["mySQL"].ConnectionString;
             connectionStringBuilder = new MySqlConnectionStringBuilder(connectionString);
-            connectionStringBuilder.Database = "sys";
+            tempDbName = connectionStringBuilder.Database;
+            connectionStringBuilder.Database = "information_schema";
         }
     }
 }

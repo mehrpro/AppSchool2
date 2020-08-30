@@ -1,5 +1,7 @@
-﻿using DevExpress.XtraEditors;
+﻿using DevExpress.Data.Utils;
+using DevExpress.XtraEditors;
 using MySql.Data.MySqlClient;
+using SchoolApp.RepositoryAbstracts;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -15,8 +17,10 @@ namespace SchoolApp.WinClient.Views.SystemForms
 {
     public partial class DbConnectionSettingForm : DevExpress.XtraEditors.XtraForm
     {
-        public DbConnectionSettingForm()
+        private IDbTools dbTools;
+        public DbConnectionSettingForm(IDbTools dbTools)
         {
+            this.dbTools = dbTools;
             InitializeComponent();
         }
 
@@ -42,44 +46,28 @@ namespace SchoolApp.WinClient.Views.SystemForms
 
         private async void btnSave_Click(object sender, EventArgs e)
         {
+            WinClient.Helper.ConfigurationTools.UpdateConnectionStrings(
+                "mySQL", txtDataSource.Text, txtDatabaseName.Text, !chkUserID.Checked, txtUserID.Text, txtPassword.Text);
             var useridCheck = chkUserID.Checked;
-
+            dbTools.RefreshConnectionString();
             btnClose.Enabled = btnSave.Enabled = txtDatabaseName.Enabled = txtDataSource.Enabled = txtPassword.Enabled = txtUserID.Enabled = chkUserID.Enabled = false;
-
-            var conncetionStringBuilder = new MySqlConnectionStringBuilder();
-            conncetionStringBuilder.Server = txtDataSource.Text;
-            conncetionStringBuilder.IntegratedSecurity = !chkUserID.Checked;
-            if (chkUserID.Checked)
+            var connected = await dbTools.CheckDBConnection();
+            if (connected)
+                btnClose.Enabled = btnSave.Enabled = txtDatabaseName.Enabled = txtDataSource.Enabled = txtPassword.Enabled = txtUserID.Enabled = chkUserID.Enabled = false;
+            if (!connected)
+                XtraMessageBox.Show(Properties.Resources.NotComplatedConnection, Text);
+            else
             {
-                conncetionStringBuilder.UserID = txtUserID.Text.Trim();
-                conncetionStringBuilder.Password = txtPassword.Text.Trim();
-            }
-            conncetionStringBuilder.Database = "information_schema";
-            try
-            {
-                using(var connection = new MySqlConnection(conncetionStringBuilder.ConnectionString))
-                {
-                    await connection.OpenAsync();
-                }
                 XtraMessageBox.Show(Properties.Resources.ComplateConnectionString, Text);
-                var config = ConfigurationManager.OpenExeConfiguration(ConfigurationUserLevel.None);
-                var connectionString =(ConnectionStringsSection) config.GetSection("connectionStrings");
-                conncetionStringBuilder.Database = txtDatabaseName.Text.Trim();
-                connectionString.ConnectionStrings["mySQL"].ConnectionString = conncetionStringBuilder.ConnectionString;
-                config.Save(ConfigurationSaveMode.Modified);
-                ConfigurationManager.RefreshSection("connectionStrings");
+
                 DialogResult = DialogResult.OK;
             }
-            catch (Exception)
-            {
 
-                XtraMessageBox.Show(Properties.Resources.NotComplatedConnection, Text);
+        }
 
-            }
-            finally
-            {
-                btnClose.Enabled = btnSave.Enabled = txtDatabaseName.Enabled = txtDataSource.Enabled = txtPassword.Enabled = txtUserID.Enabled = chkUserID.Enabled = true;
-            }
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            DialogResult = DialogResult.Cancel;
         }
     }
 }
